@@ -9,6 +9,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
+# Customizes pager colors
 export LESS_TERMCAP_mb=$'\e[1;31m'     # begin bold
 export LESS_TERMCAP_md=$'\e[1;33m'     # begin blink
 export LESS_TERMCAP_so=$'\e[01;44;37m' # begin reverse video
@@ -19,5 +20,7 @@ export LESS_TERMCAP_ue=$'\e[0m'        # reset underline
 
 export GROFF_NO_SGR=1
 
-# !!!Maybe replace the pager with nvimpager
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
+# TODO: Maybe replace the pager with nvimpager
