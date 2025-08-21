@@ -77,7 +77,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(ruby git mise)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -131,3 +131,6 @@ export GROFF_NO_SGR=1
 # Default editor
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+# Ruby/Python/Node Version Management
+eval "$(mise activate zsh)"

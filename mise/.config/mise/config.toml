@@ -1,0 +1,7 @@
+[tools]
+ruby = "3.4.5"
+usage = "latest"
+
+[settings]
+# Adds support for interpreting .ruby-version & Gemfile files
+idiomatic_version_file_enable_tools = ["ruby"]
