@@ -4,3 +4,4 @@ set laststatus=2
 set tabstop=2
 set ic " Case insensitive
 set incsearch " Incremental Search
+set fileformats=unix,dos
