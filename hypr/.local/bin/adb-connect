@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Check for inet 
+while ! ip -o addr show up | grep -v ': lo' | grep -q 'inet '; do
+    echo "Waiting for a usable network interface..."
+    sleep 1 
+done
+
+adb kill-server && adb start-server
+adb track-devices -l | while read event; do
+	echo "Event received: $event"
+  connect_status=$(echo $event | awk '{ print $2 }') 
+	model=$(echo $event | awk '{ split($4,a,":"); print a[2] }')
+	if [[ $connect_status == "device" ]]; then
+		notify-send "Model $model connected!"	
+	else 
+		notify-send "Model $model disconnected!"	
+	fi
+done 

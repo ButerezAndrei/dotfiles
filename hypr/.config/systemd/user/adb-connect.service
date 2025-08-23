@@ -1,0 +1,12 @@
+[Unit]
+Description=Adb Connection Notifier
+StartLimitIntervalSec=1d
+StartLimitBurst=10
+After=graphical-session.target
+[Service]
+#Used for debug, tail /tmp/adb.1000.log
+#Environment=ADB_TRACE=all
+ExecStart=%h/.local/bin/adb-connect
+Restart=always
+[Install]
+WantedBy=graphical-session.target
