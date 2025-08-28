@@ -1,0 +1,12 @@
+tab = "output"
+[[names.overrides]]
+types = [ "endpoint" ]
+property = "device:device.name"
+value = "alsa_card.usb-Generic_USB_Audio-00"
+templates = [ "{node:node.description}" ]
+
+[[names.overrides]]
+types = [ "device" ]
+property = "device:device.name"
+value = "alsa_card.usb-Generic_USB_Audio-00"
+templates = [ "{device:device.description}" ]
