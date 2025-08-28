@@ -4,7 +4,7 @@
     "height": 30,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["tray", "custom/weather", "custom/storage", "pulseaudio", "network", "idle_inhibitor", "clock"],
+    "modules-right": ["group/tray-expander", "custom/weather", "custom/storage", "pulseaudio", "network", "idle_inhibitor", "clock"],
     "hyprland/workspaces": {
         "show-special": true, 
 				"format": "{name}: {icon}",
@@ -71,5 +71,20 @@
             "deactivated": ""
         },
         "tooltip": false
-    }
+    },
+		"group/tray-expander": {
+			"orientation": "inherit",
+			"drawer": {
+				"transition-duration": 600,
+				"children-class": "tray-group-item"
+			},
+			"modules": ["custom/expand-icon", "tray"]
+		},
+		"custom/expand-icon": {
+			"format": " ",
+			"tooltip": false
+		},
+		"tray": {
+			"spacing": 8
+		}
 }
