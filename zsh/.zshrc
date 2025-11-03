@@ -134,3 +134,4 @@ export EDITOR="$VISUAL"
 
 # Ruby/Python/Node Version Management
 eval "$(mise activate zsh)"
+alias lzd='lazydocker'
