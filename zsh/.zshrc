@@ -113,6 +113,17 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+
+# yazi y wrapper for maintaing the working dir
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
+
 # Package manager for zsh plugins
 source '/usr/share/zsh-antidote/antidote.zsh'
 antidote load
@@ -143,3 +154,4 @@ eval "$(direnv hook zsh)"
 # Fly.io env vars
 export FLYCTL_INSTALL="/home/bituwy/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"

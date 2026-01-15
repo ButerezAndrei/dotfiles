@@ -1,0 +1,11 @@
+[Unit]
+Description=ActivityWatch Window Hyprland watcher
+After=graphical-session.target
+
+[Service]
+ExecStart=/home/bituwy/.cargo/bin/aw-watcher-window-hyprland
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target

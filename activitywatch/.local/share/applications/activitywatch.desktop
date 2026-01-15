@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=ActivityWatch
+Comment=Open ActivityWatch Dashboard
+Exec=xdg-open http://localhost:5600
+Icon=activitywatch
+Terminal=false
+Type=Application
+Categories=Utility;
