@@ -147,11 +147,3 @@ export BUNDLER_EDITOR='code'
 # Ruby/Python/Node Version Management
 eval "$(mise activate zsh)"
 alias lzd='lazydocker'
-
-# Direnv setup for .env files to be loaded on cd
-eval "$(direnv hook zsh)"
-
-# Fly.io env vars
-export FLYCTL_INSTALL="/home/bituwy/.fly"
-export PATH="$FLYCTL_INSTALL/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"

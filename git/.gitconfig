@@ -3,3 +3,9 @@
 [user]
 	email = buterezandrei@gmail.com
 	name = Andrei Buterez
+[push]
+	autoSetupRemote = true
+[merge]
+	tool = vscode
+[mergetool]
+	prompt = false

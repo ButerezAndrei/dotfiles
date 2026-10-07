@@ -1,0 +1,12 @@
+# Disabled for now as it seems the plymouth quit command doesnt manage to trigger resulting in infinite plymouth loading screen
+[Unit]
+Description=Quit Plymouth after graphical session is ready
+After=graphical-session.target
+Wants=graphical-session.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/plymouth quit
+
+[Install]
+WantedBy=graphical-session.target

@@ -3,6 +3,11 @@ use = "yazi-rs/plugins:full-border"
 rev = "e95c7b3"
 hash = "3996fc74044bc44144b323686f887e1"
 
+[[plugin.deps]]
+use = "uhs-robert/recycle-bin"
+rev = "1762676"
+hash = "c77042b4296544a9edb4849338056039"
+
 [[flavor.deps]]
 use = "yazi-rs/flavors:dracula"
 rev = "9cd2ac4"

@@ -6,3 +6,4 @@ usage = "latest"
 [settings]
 # Adds support for interpreting .ruby-version & Gemfile files
 idiomatic_version_file_enable_tools = ["ruby"]
+# ruby.ruby_build_opts = "--with-openssl-dir=/usr/lib/openssl-1.1"

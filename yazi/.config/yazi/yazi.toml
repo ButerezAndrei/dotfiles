@@ -1,2 +1,7 @@
 [mgr]
 show_hidden = true
+[plugin]
+prepend_fetchers = [
+	{ id = "recycle-bin-extended", name = "*" , run = "recycle-bin-extended" },
+]
+
